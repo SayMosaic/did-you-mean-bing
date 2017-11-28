@@ -24,12 +24,10 @@ function didYouMean(wrongQuery) {
     }
 
     if (vevo && vevo !== wrongQuery) return vevo
-    return null
+    throw new Error('Nothing found!')
   })
   .then(res => `${verb}${res}`.replace(/\s\s+/g, ' '))
-  .catch(e => {
-    return null
-  })
+  .catch(() => null)
 }
 
 function aggressiveDidYouMeanSpotify(wrongQuery) {
@@ -38,7 +36,6 @@ function aggressiveDidYouMeanSpotify(wrongQuery) {
   .then(html => {
     const typeAndId = html.split('https://open.spotify.com/')[1].split('"')[0].split("/")
     const length = typeAndId.length
-    console.log('typeAndId: ', typeAndId);
     return {type: typeAndId[length - 2], id: typeAndId[length - 1]}
   })
 }

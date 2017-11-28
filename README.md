@@ -6,7 +6,7 @@ Use search engine to correct results from speech recognition. Currently leverage
 yarn add SayMosaic/did-you-mean-bing
 ```
 ```
-const { didYouMean, runAggressiveDidYouMeanSpotify } = require('did-you-mean-bing')
+const { didYouMean, aggressiveDidYouMeanSpotify } = require('did-you-mean-bing')
 ```
 
 # APIs
@@ -15,9 +15,9 @@ const { didYouMean, runAggressiveDidYouMeanSpotify } = require('did-you-mean-bin
 didYouMean('play fireworks by katy perry')
 // 'play firework by katy perry'
 ```
-`runAggressiveDidYouMeanSpotify` , aggressively finds a track/album/artist/playlist on spotify. Returns the item with its spotify `id`, and `type`.
+`aggressiveDidYouMeanSpotify` , aggressively finds a track/album/artist/playlist on spotify. Returns the item with its spotify `id`, and `type`.
 ```
-runDidYouMeanTest('play fireworks by katy perry')
+aggressiveDidYouMeanSpotify('play fireworks by katy perry')
 // {type: 'track', id: '1mXuMM6zjPgjL4asbBsgnt'}
 ```
 
