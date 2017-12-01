@@ -39,6 +39,7 @@ function aggressiveDidYouMeanSpotify(wrongQuery) {
     if (typeAndId[length - 2] === 'playlist') return {type: typeAndId[length - 2], id: typeAndId[length - 1], userId: typeAndId[length - 3]}
     return {type: typeAndId[length - 2], id: typeAndId[length - 1]}
   })
+  .catch(() => null)
 }
 
 function checkBingVanilla(html) {

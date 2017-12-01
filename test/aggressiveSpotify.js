@@ -1,4 +1,9 @@
 const runAggressiveDidYouMeanSpotify = require('../util').runAggressiveDidYouMeanSpotify
+
+describe('Return null when Spotify aggressively has a unrelated input ', function vevoTest() {
+  runAggressiveDidYouMeanSpotify('play podcast ted radio hour', null)
+})
+
 describe('Get playable from Spotify aggressively with wrong name, track/album/artist/playlist', function vevoTest() {
   runAggressiveDidYouMeanSpotify('play fireworks from katy perry', {type: 'track', id: '1mXuMM6zjPgjL4asbBsgnt'})
   runAggressiveDidYouMeanSpotify('play wolf from Selena Gomez', {type: 'album', id: '5gQZvWM1o8NkQndueJtZcP'})
