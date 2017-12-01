@@ -36,6 +36,7 @@ function aggressiveDidYouMeanSpotify(wrongQuery) {
   .then(html => {
     const typeAndId = html.split('https://open.spotify.com/')[1].split('"')[0].split("/")
     const length = typeAndId.length
+    if (typeAndId[length - 2] === 'playlist') return {type: typeAndId[length - 2], id: typeAndId[length - 1], userId: typeAndId[length - 3]}
     return {type: typeAndId[length - 2], id: typeAndId[length - 1]}
   })
 }

@@ -15,7 +15,7 @@ const { didYouMean, aggressiveDidYouMeanSpotify } = require('did-you-mean-bing')
 didYouMean('play fireworks by katy perry')
 // 'play firework by katy perry'
 ```
-`aggressiveDidYouMeanSpotify` , aggressively finds a track/album/artist/playlist on spotify. Returns the item with its spotify `id`, and `type`.
+`aggressiveDidYouMeanSpotify` , aggressively finds a track/album/artist/playlist on spotify. Returns the item with its spotify `id`, and `type`. If it's a playlist, `userId` will also be returned.
 ```
 aggressiveDidYouMeanSpotify('play fireworks by katy perry')
 // {type: 'track', id: '1mXuMM6zjPgjL4asbBsgnt'}

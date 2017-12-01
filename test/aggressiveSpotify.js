@@ -5,7 +5,7 @@ describe('Get playable from Spotify aggressively with wrong name, track/album/ar
   runAggressiveDidYouMeanSpotify('play firefly from owl city', {type: 'track', id: '1mr3616BzLdhXfJmLmRsO8'})
   runAggressiveDidYouMeanSpotify('play sunny day from armin van buuren', {type: 'album', id: '0SottnyJaBApBrZZT6Y3kb'})
   runAggressiveDidYouMeanSpotify('play Selina Gomez', {type: 'artist', id: '0C8ZW7ezQVs4URX5aX7Kqx'})
-  runAggressiveDidYouMeanSpotify('play new music fridays', {type: 'playlist', id: '1yHZ5C3penaxRdWR7LRIOb'})
+  runAggressiveDidYouMeanSpotify('play new music fridays', {type: 'playlist', id: '1yHZ5C3penaxRdWR7LRIOb', userId: 'spotify'})
 })
 
 describe('Get playable from Spotify aggressively with correct name', function vevoTest() {
@@ -14,5 +14,5 @@ describe('Get playable from Spotify aggressively with correct name', function ve
   runAggressiveDidYouMeanSpotify('play fireflies from owl city', {type: 'track', id: '1mr3616BzLdhXfJmLmRsO8'})
   runAggressiveDidYouMeanSpotify('play sunny days from armin van buuren', {type: 'album', id: '2Pnc34J8XGKOfnBBnfJisu'})
   runAggressiveDidYouMeanSpotify('play Selena Gomez', {type: 'artist', id: '0C8ZW7ezQVs4URX5aX7Kqx'})
-  runAggressiveDidYouMeanSpotify('play new music friday', {type: 'playlist', id: '1yHZ5C3penaxRdWR7LRIOb'})
+  runAggressiveDidYouMeanSpotify('play new music friday', {type: 'playlist', id: '1yHZ5C3penaxRdWR7LRIOb', userId: 'spotify'})
 })
