@@ -26,7 +26,10 @@ function didYouMean(wrongQuery) {
     if (vevo && vevo !== wrongQuery) return vevo
     throw new Error('Nothing found!')
   })
-  .then(res => `${verb}${res}`.replace(/\s\s+/g, ' '))
+  .then(res => {
+    if (!res.includes('<') && !res.includes('>')) return `${verb}${res}`.replace(/\s\s+/g, ' ')
+    return `${verb}${wrongQuery}`
+  })
   .catch(() => null)
 }
 
